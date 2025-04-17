@@ -8,7 +8,7 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{$_SERVER['HTTP_HOST']}} - Admin Dashboard</title>
 
-    <link rel="shortcut icon" size="48x48" href="/frontend/images/favicon.png">
+    <link rel="shortcut icon" size="48x48" href="/frontend/images/favicon.ico">
     <!-- page css -->
     <link href="/assets/vendors/select2/select2.css" rel="stylesheet">
     <link href="/assets/vendors/bootstrap-datepicker/bootstrap-datepicker.min.css" rel="stylesheet">
@@ -25,14 +25,14 @@
         <div class="header">
             <div class="logo logo-dark">
                 <a href="{{route('home')}}">
-                    <img style="width: 50px;margin-top: 15px" src="/frontend/images/favicon.png" alt="Logo">
-                    <img style="margin-top: 10px;margin-left: 16px;width:45px" class="logo-fold" src="/frontend/images/favicon.png" alt="Logo">
+                    <img style="width: 50px;margin-top: 15px" src="/frontend/images/favicon.ico" alt="Logo">
+                    <img style="margin-top: 10px;margin-left: 16px;width:45px" class="logo-fold" src="/frontend/images/favicon.ico" alt="Logo">
                 </a>
             </div>
             <div class="logo logo-white">
                 <a href="{{route('home')}}">
-                    <img style="width: 170px;margin-top: 15px" src="/frontend/images/favicon.png" alt="Logo">
-                    <img style="margin-top: 10px;margin-left: 16px;width:45px" class="logo-fold" src="/frontend/images/favicon.png" alt="Logo">
+                    <img style="width: 170px;margin-top: 15px" src="/frontend/images/favicon.ico" alt="Logo">
+                    <img style="margin-top: 10px;margin-left: 16px;width:45px" class="logo-fold" src="/frontend/images/favicon.ico" alt="Logo">
                 </a>
             </div>
             <div class="nav-wrap">

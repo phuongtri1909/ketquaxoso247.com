@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Login - {{$_SERVER['HTTP_HOST']}}</title>
 
-    <link rel="shortcut icon" size="48x48" href="/frontend/images/favicon.png">
+    <link rel="shortcut icon" size="48x48" href="/frontend/images/favicon.ico">
     <!-- Core css -->
     <link href="/assets/css/app.min.css" rel="stylesheet">
 </head>

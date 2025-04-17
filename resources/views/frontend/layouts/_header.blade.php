@@ -45,8 +45,8 @@
     <meta name="COPYRIGHT" content="Copyright (C) 2023 {{ $_SERVER['HTTP_HOST'] }}" />
     <link rel='index' title='Kết quả xổ số' href='{{ route('home') }}' />
     <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/logosite.png') }}">
-    <link rel="shortcut icon" size="48x48" href="{{ url('frontend/images/favicon.png') }}">
-    <link rel="icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/png/x-icon">
+    <link rel="shortcut icon" size="48x48" href="{{ url('frontend/images/favicon.ico') }}">
+    <link rel="icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/png/x-icon">
     <meta name="theme-color" content="#ED1C25">
     <meta name="REVISIT-AFTER" content="1 DAYS">
     <meta name="viewport"
@@ -173,7 +173,7 @@
                         {{-- <div class="home-logo"> --}}
                         {{-- <a href="/" --}}
                         {{-- title="KQXS - XS - Xổ Số Kiến Thiết 3 miền hôm nay - XS3M"><img --}}
-                        {{-- data-src="/frontend/images/favicon.png" src="data:," --}}
+                        {{-- data-src="/frontend/images/favicon.ico" src="data:," --}}
                         {{-- class="sm-only lazy" alt="ic_launcher"></a> --}}
                         {{-- </div> --}}
                     </li>

@@ -31,7 +31,7 @@
     <meta name="COPYRIGHT" content="Copyright (C) 2023 ketquaxoso247.com">
     <link rel="index" title="Kết quả xổ số" href="https://ketquaxoso247.com">
     <link rel="image_src" type="image/jpeg" href="">
-    <link rel="shortcut icon" href="{{url('frontend/images/favicon.png')}}">
+    <link rel="shortcut icon" href="{{url('frontend/images/favicon.ico')}}">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="{{url('frontend/emb/css/style.css')}}?v={{rand(1000,100000)}}" media="all">
