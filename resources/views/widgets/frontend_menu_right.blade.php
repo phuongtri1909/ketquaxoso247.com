@@ -100,6 +100,16 @@
                     $link = str_replace('xoso.site', 'ketquaxoso247.com', $item->link);
                     
                     ?>
+                    <span class="fw-bold ms-2 ">
+                        <i class="fa-regular fa-hand-point-right" style="color: #d05f43;"></i>
+                        @if ($item->category_id == '1')
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmb') }}" title="Dự đoán xổ số miền Bắc">Dự đoán XSMB</a>
+                        @elseif ($item->category_id == '3')
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmn') }}" title="Dự đoán xổ số miền Nam">Dự đoán XSMN</a>
+                        @elseif ($item->category_id == '2')
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmt') }}" title="Dự đoán xổ số miền Trung">Dự đoán XSMT</a>
+                        @endif
+                    </span>
                     <li class="clearfix"><a title="{{ $item->title }}" href="{{ $link }}" class="fl"><img
                                 class="mag-r5 fl lazy" width="60" height="33" title="{{ $item->title }}"
                                 alt="{{ $item->title }}" src="{{ $item->img }}"
