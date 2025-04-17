@@ -2,13 +2,12 @@
 date_default_timezone_set('Asia/Ho_Chi_Minh');
 ?>
 @extends('frontend.layouts.app')
-@section('title', 'XSMB - Kết quả xổ số Miền Bắc hôm nay - KQXSMB - SXMB - XSTD.')
-@section('decription', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất từ
-    trường quay XSKTMB Hà Nội vào lúc 18:15.')
+@section('title', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('decription', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
 @section('keyword', 'xsmb, sxmb, kqxsmb, xstd, xsmb hom nay, sxmb hom nay, xs mien bac, kqxs mien bac, xsmb 30 ngay, xổ
     số miền bắc,kq mb, kq xsmb, ket qua xsmb, xo so mien bac, sxmb hom nay, ket qua mien bac, kết quả xổ số miền bắc,xo so
     thu do,xo so mien bac hom nay')
-@section('h1', 'XSMB - Kết quả xổ số Miền Bắc hôm nay - KQXSMB - SXMB - XSTD.')
+@section('h1', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
 @section('content')
     <div class="col-l">
         {{-- <div class="box"> --}}

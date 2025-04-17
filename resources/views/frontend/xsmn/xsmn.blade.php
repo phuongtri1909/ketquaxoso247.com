@@ -4,14 +4,13 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 
 @extends('frontend.layouts.app')
 
-@section('title', 'XSMN - Kết quả xổ số miền Nam hôm nay - SXMN - KQXSMN')
+@section('title', 'KQXSMN - SXMN - Trực tiếp kết quả xổ số miền Nam - XSMN hôm nay nhanh nhất, chính xác nhất')
 @section('decription',
-    'KQXSMN - SXMN - Trực tiếp kết quả xổ số miền Nam - XSMN hôm nay nhanh nhất, chính xác nhất từ
-    trường quay XSKTMN vào lúc 16:15.')
+    'KQXSMN - SXMN - Trực tiếp kết quả xổ số miền Nam - XSMN hôm nay nhanh nhất, chính xác nhất')
 @section('keyword',
     'xsmn, sxmn, kqxsmn, xổ số miền nam, xs mien nam, kq mien nam, kqxs mien nam, ket qua xsmn, xo so
     mien nam, xsmn hom nay, ket qua mien nam, kết quả xổ số miền nam, xo so mien nam hom nay')
-@section('h1', 'XSMN - Kết quả xổ số miền Nam hôm nay - SXMN - KQXSMN')
+@section('h1', 'KQXSMN - SXMN - Trực tiếp kết quả xổ số miền Nam - XSMN hôm nay nhanh nhất, chính xác nhất')
 @section('content')
     <div class="col-l" style="height: auto !important;">
         {{-- <div class="box"> --}}

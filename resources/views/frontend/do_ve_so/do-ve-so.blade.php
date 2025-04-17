@@ -3,9 +3,9 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 ?>
 @extends('frontend.layouts.app')
 
-@section('title', 'Dò vé số - Dò vé số online KQ Online')
-@section('decription', 'Dò vé số - Dò vé số online KQ Online')
-@section('h1', 'Dò vé số - Dò vé số online KQ Online')
+@section('title', 'Dò vé số - Dò vé số chính xác nhất')
+@section('decription', 'Dò vé số - Dò vé số online chính xác nhất')
+@section('h1', 'Dò vé số - Dò vé số online chính xác nhất')
 
 @section('breadcrumb')
     <div class="linkway">

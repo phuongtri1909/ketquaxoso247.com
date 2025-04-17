@@ -4,8 +4,9 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 @extends('frontend.layouts.app')
 
 @section('title','Sổ mơ - Giải mã giấc mơ - giải mộng chiêm bao Với xổ sổ trực tiếp')
-@section('decription','Sổ mơ Với xổ sổ trực tiếp- Giải mã giấc mơ ✅ - giải mộng chiêm bao.Bảng tra sổ mơ số đẹp đầy đủ và chính xác nhất. Giấc mơ của bạn có ý nghĩa gì, con số tương ứng ra sao? Chúng tôi sẽ giải mã giúp bạn!')
+@section('decription','Sổ mơ - Giải mã giấc mơ - giải mộng chiêm bao Với xổ sổ trực tiếp')
 @section('h1','Sổ mơ - Giải mã giấc mơ - giải mộng chiêm bao Với xổ sổ trực tiếp')
+@section('keyword','Sổ mơ, giải mã giấc mơ, giải mộng chiêm bao, xổ số trực tiếp, xổ số, xổ số miền bắc, xổ số miền nam, xổ số miền trung')
 
 @section('breadcrumb')
     <div class="linkway">

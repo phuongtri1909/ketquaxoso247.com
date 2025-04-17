@@ -1,8 +1,8 @@
 @extends('frontend.layouts.app')
 
-@section('title','Xổ Số Vietlott - XS Vietlott - KQXS Vietlott - Kết quả xổ số Vietlott hôm nay tại ketquaxoso247.com')
-@section('decription','Vietlott - XS Vietlott - KQXS Vietlott ✅ - Kết quả xổ số V KQXS ietlott hôm nay được cập nhật nhanh nhất, chính xác nhất, mang cơ hội may mắn đến cho mọi người')
-@section('h1','Xổ Số Vietlott - XS Vietlott - KQXS Vietlott - Kết quả xổ số Vietlott hôm nay ketquaxoso247.com')
+@section('title','Xổ số Vietlott - XS Vietlott - KQXS Vietlott - Kết quả xổ số Vietlott hôm nay')
+@section('decription','Xổ số Vietlott - XS Vietlott - KQXS Vietlott - Kết quả xổ số Vietlott hôm nay')
+@section('h1','Xổ số Vietlott - XS Vietlott - KQXS Vietlott - Kết quả xổ số Vietlott hôm nay')
 
 @section('breadcrumb')
     <div class="linkway">

@@ -3,9 +3,9 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
 ?>
 @extends('frontend.layouts.app')
 
-@section('title','Thống kê nhanh tần suất bộ số với xổ sổ trực tiếp')
-@section('decription','Thống kê nhanh với xổ sổ trực tiếp: thống kê ngày về gần nhất, tổng số lần suất hiện, số ngày chưa về cho đến nay một cách trực quan nhanh nhất')
-@section('h1','Thống kê nhanh tần suất bộ số xổ sổ trực tiếp')
+@section('title','Thống kê nhanh tần suất bộ số xổ sổ trực tiếp - ketquaxoso247.com')
+@section('decription','Thống kê nhanh tần suất bộ số xổ sổ trực tiếp - ketquaxoso247.com')
+@section('h1','Thống kê nhanh tần suất bộ số xổ sổ trực tiếp - ketquaxoso247.com')
 
 @section('breadcrumb')
     <div class="linkway">

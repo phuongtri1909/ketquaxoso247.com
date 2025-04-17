@@ -18,7 +18,6 @@
     <meta name="DC.Source" content="/">
     <meta name="DC.Coverage" content="Vietnam">
     <meta name="RATING" content="GENERAL">
-    {{-- <meta property="fb:app_id" content="224529274568575"> --}}
     <meta property="og:type" content="website">
     <meta property="og:title" content="@yield('title')">
     <meta property="og:description" content="@yield('decription')">
