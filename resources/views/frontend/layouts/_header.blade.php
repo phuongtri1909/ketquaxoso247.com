@@ -28,7 +28,7 @@
         @endphp
         <meta property="og:image" content="{{ url($img_dt) }}">
     @else
-        <meta property="og:image" content="{{ url('frontend/images/xo-so-truc-tiep.png') }}">
+        <meta property="og:image" content="{{ url('frontend/images/logosite.png') }}">
     @endif
     <meta property="og:site_name" content="{{ $_SERVER['HTTP_HOST'] }}">
     <meta name="twitter:card" content="summary_large_image">
@@ -44,7 +44,7 @@
     <meta name="AUTHOR" content="{{ $_SERVER['HTTP_HOST'] }}" />
     <meta name="COPYRIGHT" content="Copyright (C) 2023 {{ $_SERVER['HTTP_HOST'] }}" />
     <link rel='index' title='Kết quả xổ số' href='{{ route('home') }}' />
-    <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/xo-so-truc-tiep.png') }}">
+    <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/logosite.png') }}">
     <link rel="shortcut icon" size="48x48" href="{{ url('frontend/images/favicon.png') }}">
     <link rel="icon" href="{{ asset('frontend/images/favicon.png') }}" type="image/png/x-icon">
     <meta name="theme-color" content="#ED1C25">
@@ -83,7 +83,7 @@
                     <div class="logo">
                         <a class="txtlogo" href="{{ route('home') }}"
                             title="KQXS - XS - Xổ Số Kiến Thiết 3 miền hôm nay - XS3M">
-                            <img src="/frontend/images/xo-so-truc-tiep.png" alt="">
+                            <img src="/frontend/images/logosite.png" alt="">
                         </a>
                     </div>
                 </div>
