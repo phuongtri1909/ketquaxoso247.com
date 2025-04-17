@@ -41,7 +41,7 @@ class FrontendMenuRight extends AbstractWidget
         $mt_province = Province::where('mien', 2)->get();
         $mn_province = Province::where('mien', 3)->get();
 
-        $postTK = Post::orderBy('date','DESC')->take(3)->get();
+        $postTK = Post::orderBy('date','DESC')->where('province_id',null)->take(3)->get();
 //        $somo = SoMoNew::orderBy('id', 'DESC')->take(5)->get();
 //        $postGiaiMaGiacMo = GiaiMaGiacMo::orderBy('id','DESC')->take(4)->get();
 //        $somo = SoMoNew::orderBy('id','DESC')->take(6)->get();

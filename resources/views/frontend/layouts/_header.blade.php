@@ -81,9 +81,9 @@
                         <span class="icon-bar"></span><span class="icon-bar"></span><span
                             class="icon-bar"></span></button>
                     <div class="logo">
-                        <a class="txtlogo" href="{{ route('home') }}"
+                        <a class="txtlogo w-auto" href="{{ route('home') }}"
                             title="KQXS - XS - Xổ Số Kiến Thiết 3 miền hôm nay - XS3M">
-                            <img src="/frontend/images/logosite.png" alt="">
+                            <img src="/frontend/images/logosite.png" alt="" style="width: 350px; height: 70px;">
                         </a>
                     </div>
                 </div>
