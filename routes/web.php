@@ -34,6 +34,7 @@ use App\Http\Controllers\Frontend\SoiCauDeTNController;
 use App\Http\Controllers\Frontend\SoicauGiai7Controller;
 use App\Http\Controllers\Frontend\ThongKeNhanhController;
 use App\Http\Controllers\Frontend\EmbedVietlottController;
+use App\Http\Controllers\Frontend\NewLoKhungController;
 
 Route::get('get-mega645', [CrawMax3DController::class, 'getMega645']);
 Route::get('get-power655', [CrawMax3DController::class, 'getPower655']);
@@ -59,6 +60,17 @@ Route::get('/clear-cache', function () {
 });
 
 Route::get('/', [HomeController::class, 'index'])->name('home');
+
+Route::controller(NewLoKhungController::class)->group(function () {
+    Route::get('soi-cau-vip', 'soiCauVip')->name('soi-cau-vip');
+    Route::get('soi-cau-vip/{slug}', 'postSoiCauVip')->name('soi-cau-vip.detail');
+
+    Route::get('nuoi-lo-khung', 'nuoiLoKhung')->name('nuoi-lo-khung');
+    Route::get('nuoi-lo-khung/{slug}', 'postNuoiLoKhung')->name('nuoi-lo-khung.detail');
+
+    Route::get('nuoi-de-khung', 'nuoiDeKhung')->name('nuoi-de-khung');
+    Route::get('nuoi-de-khung/{slug}', 'postNuoiDeKhung')->name('nuoi-de-khung.detail');
+});
 
 Route::controller(RSSController::class)->group(function () {
     Route::get('rss', 'rssIndex')->name('rss.rssIndex');

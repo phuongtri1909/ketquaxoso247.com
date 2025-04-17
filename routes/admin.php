@@ -13,6 +13,7 @@ use App\Http\Controllers\Admin\LinkHeaderController;
 use App\Http\Controllers\Admin\HtmlContentController;
 use App\Http\Controllers\Admin\CustomUploadController;
 use App\Http\Controllers\Admin\DuDoanXoSoController;
+use App\Http\Controllers\Admin\NewLoKhungController;
 
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'store'])->name('login.post');
@@ -33,6 +34,7 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('somo', SoMoController::class);
     Route::resource('somonew', SoMoNewController::class);
     Route::resource('news', NewsController::class);
+    Route::resource('cau-lo-de', NewLoKhungController::class);
     Route::resource('user', UserController::class);
 
     Route::resource('posts', DuDoanXoSoController::class)->except(['show','create','store','destroy']);

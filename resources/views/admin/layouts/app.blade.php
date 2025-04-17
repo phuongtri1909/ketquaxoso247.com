@@ -152,6 +152,9 @@
                             <li>
                                 <a href="{{route('news.index')}}">Bài viết</a>
                             </li>
+                            <li>
+                                <a href="{{route('cau-lo-de.index')}}">Cầu - Lô - Đề</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

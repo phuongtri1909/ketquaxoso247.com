@@ -3,7 +3,8 @@
     @yield('content')
     <div class="col-center">
         <div class="content-right bullet live_mb">
-            <div class="title-r"><a class="bg-blue" title="Xổ số miền bắc" href="{{ route('xsmb') }}">Xổ số miền bắc</a></div>
+            <div class="title-r"><a class="bg-blue" title="Xổ số miền bắc" href="{{ route('xsmb') }}">Xổ số miền bắc</a>
+            </div>
             <ul>
                 <li @if (url()->full() == route('xsmb')) class="active" @endif><a title="Xổ số miền Bắc"
                         href="{{ route('xsmb') }}">Miền Bắc</a>
@@ -17,7 +18,8 @@
         </div>
 
         <div class="content-right bullet tk-block live_mb">
-            <div class="title-r"><a class="bg-blue" title="Xổ số vietlott" href="{{ route('vietlott') }}">Xổ số vietlott</a></div>
+            <div class="title-r"><a class="bg-blue" title="Xổ số vietlott" href="{{ route('vietlott') }}">Xổ số
+                    vietlott</a></div>
             <ul>
                 <li @if (url()->full() == route('xsthantai')) class="active" @endif><a href="{{ route('xsthantai') }}">Thần
                         Tài
@@ -94,7 +96,6 @@
                     đoán xổ số</a></div>
             <ul class="list-news">
                 @foreach ($postTK as $item)
-                
                     <?php
                     $link = str_replace('xoso.site', 'ketquaxoso247.com', $item->link);
                     
@@ -107,24 +108,27 @@
                 @endforeach
             </ul>
         </div>
-        
+
     </div>
     <div class="col-right">
 
         <div class="content-right bullet tk-cau ">
-            <div class="title-r"><a class="bg-blue" title="Dò vé số online - May mắn mỗi ngày!...">Dò vé số online - May mắn mỗi ngày!...</a></div>
+            <div class="title-r"><a class="bg-blue" title="Dò vé số online - May mắn mỗi ngày!...">Dò vé số online - May
+                    mắn mỗi ngày!...</a></div>
             <div class="mx-2">
                 <form action="{{ route('do-ve-so') }}" method="get">
                     <div class="row mb-2">
                         <div class="col-md-5">
-                            <input style="width:100%" name="date" type="date" class="form-control-sm p-0 date-do-ve date-do-ve2 mb-3 mb-md-0" id="date-right"
-                                    value="{{ isset($date) ? $date : date('Y-m-d') }}">
+                            <input style="width:100%" name="date" type="date"
+                                class="form-control-sm p-0 date-do-ve date-do-ve2 mb-3 mb-md-0" id="date-right"
+                                value="{{ isset($date) ? $date : date('Y-m-d') }}">
                         </div>
                         <div class="col-md-7">
                             <div class="row">
                                 <label class="col-3 col-form-label" for="">Tỉnh:</label>
                                 <div class="col-9">
-                                    <select style="width:100%" name="province" class="form-control-sm p-0 province-do-ve2 col-9" id="province"></select>
+                                    <select style="width:100%" name="province"
+                                        class="form-control-sm p-0 province-do-ve2 col-9" id="province"></select>
                                 </div>
                             </div>
                         </div>
@@ -134,7 +138,8 @@
                             <div class="row">
                                 <label class="col-3 col-form-label" for="vé số">Vé số:</label>
                                 <div class="col-9">
-                                    <input style="width: 100%;" name="lottery" type="text" class="form-control-sm p-0" id="number">
+                                    <input style="width: 100%;" name="lottery" type="text"
+                                        class="form-control-sm p-0" id="number">
                                 </div>
                             </div>
                         </div>
@@ -145,14 +150,31 @@
                 </form>
             </div>
         </div>
-        
+
+        <div class="content-right bullet live_mb">
+            <ul>
+                <li @if (url()->full() == route('soi-cau-vip'))  @endif><a title="Soi Cầu VIP"
+                        href="{{ route('soi-cau-vip') }}">Soi Cầu VIP</a>
+                </li>
+
+                <li @if (url()->full() == route('nuoi-lo-khung'))  @endif><a title="Nuôi lô khung"
+                        href="{{ route('nuoi-lo-khung') }}">Nuôi lô khung</a>
+                </li>
+
+                <li @if (url()->full() == route('nuoi-de-khung'))  @endif><a title="Nuôi đề khung"
+                        href="{{ route('nuoi-de-khung') }}">Nuôi đề khung</a>
+                </li>
+            </ul>
+
+        </div>
+
         <div class="content-right bullet tk-block ">
             <div class="title-r"><a class="bg-blue" title="Thống kê">Quay thử</a></div>
             <ul class="stastic-lotery">
                 <li @if (url()->full() == route('quay_thu.mb')) class="active" @endif><a href="{{ route('quay_thu.mb') }}"
                         title="Quay thử miền Bắc">Quay thử miền Bắc</a></li>
-                <li @if (url()->full() == route('quay_thu.mt')) class="active" @endif><a
-                        href="{{ route('quay_thu.mt') }}" title="Quay thử miền Trung">Quay thử miền Trung</a>
+                <li @if (url()->full() == route('quay_thu.mt')) class="active" @endif><a href="{{ route('quay_thu.mt') }}"
+                        title="Quay thử miền Trung">Quay thử miền Trung</a>
                 </li>
                 <li @if (url()->full() == route('quay_thu.mn')) class="active" @endif><a href="{{ route('quay_thu.mn') }}"
                         title="Quay thử miền Nam">Quay thử miền Nam</a></li>
@@ -202,8 +224,8 @@
                 {{-- <li @if (url()->full() == route('tk.dac-biet', 'mb')) class="active" @endif><a href="#" title="2 số cuối giải đặc biệt">2 số cuối giải đặc biệt</a> --}}
                 {{-- </li> --}}
                 {{-- <li @if (url()->full() == route('tk.tan-suat-lo-to', 'mb')) class="active" @endif><a href="#" title="Tần suất loto">Tần suất loto</a></li> --}}
-                <li @if (url()->full() == route('tk.dac-biet-tuan')) class="active" @endif><a href="{{ route('tk.dac-biet-tuan') }}"
-                        title="Bảng đặc biệt tuần">Bảng đặc biệt tuần</a></li>
+                <li @if (url()->full() == route('tk.dac-biet-tuan')) class="active" @endif><a
+                        href="{{ route('tk.dac-biet-tuan') }}" title="Bảng đặc biệt tuần">Bảng đặc biệt tuần</a></li>
                 <li @if (url()->full() == route('tk.dac-biet-thang')) class="active" @endif><a
                         href="{{ route('tk.dac-biet-thang') }}" title="Bảng đặc biệt tháng">Bảng đặc biệt tháng</a>
                 </li>
