@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ketquaxoso247.com/sitemap.xml
