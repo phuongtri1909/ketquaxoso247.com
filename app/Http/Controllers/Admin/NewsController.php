@@ -119,7 +119,6 @@ class NewsController extends Controller
                     Rule::unique('news_xsdp')->ignore($id),
                 ],
                 'content' => 'required',
-                'slug' => 'required',
             ]);
         if ($v->fails()) {
             return redirect()->back()->withErrors($v->errors())->withInput();

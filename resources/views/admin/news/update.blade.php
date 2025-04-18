@@ -27,7 +27,7 @@
                         </div>
                     </div>
                     <div class="form-group">
-                        <label class="col-xs-2 control-label">Slug<span class="required">*</span></label>
+                        <label class="col-xs-2 control-label">Slug</label>
 
                         <div class="col-xs-10">
                             <input type="text" placeholder="Slug" value="{{ old('slug',$post->slug) }}" name="slug"

@@ -154,7 +154,7 @@ class NewLoKhungController extends Controller
                     Rule::unique('new_lo_khungs')->ignore($id),
                 ],
                 'content' => 'required',
-                'slug' => 'required',
+               
                 'type' => 'required|in:soi-cau-vip,nuoi-lo-khung,nuoi-de-khung',
             ]
         );
