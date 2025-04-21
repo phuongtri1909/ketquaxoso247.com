@@ -6,13 +6,28 @@
             <div class="title-r"><a class="bg-blue" title="Xổ số miền bắc" href="{{ route('xsmb') }}">Xổ số miền bắc</a>
             </div>
             <ul>
-                <li @if (url()->full() == route('xsmb')) class="active" @endif><a title="Xổ số miền Bắc"
-                        href="{{ route('xsmb') }}">Miền Bắc</a>
-                    <i class="icon icon_live" style="display: none"><i
-                            class="fas fa-spinner fa-pulse text-danger"></i></i>
-                    <i class="fas fa-check icon icon_done" style="display: none"></i>
-                    <span class="badge icon icon_w" style="display: none">18:05</span>
-                </li>
+                @foreach ($mb_province as $pro)
+                    @if (strpos($pro->ngay_quay, $day) !== false)
+                        <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="{{ route('xstinh.tinh', $pro->slug) }}"
+                                    title="{{ $pro->name }}">{{ $pro->name }}</a>
+                                <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                        class="fas fa-check-circle text-success"></i></span>
+                                <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                                    <div class="live-dot dot-1"></div>
+                                    <div class="live-dot dot-2"></div>
+                                    <div class="live-dot dot-3"></div>
+                                </span>
+                            </div>
+                        </li>
+                    @else
+                        <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif><a
+                                href="{{ route('xstinh.tinh', $pro->slug) }}"
+                                @if (url()->full() == route('xstinh.tinh', $pro->slug)) @else class="list-group-item" @endif
+                                title="{{ $pro->name }}">{{ $pro->name }}</a></li>
+                    @endif
+                @endforeach
             </ul>
 
         </div>
@@ -24,12 +39,17 @@
                 @foreach ($mt_province as $pro)
                     @if (strpos($pro->ngay_quay, $day) !== false)
                         <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif>
-                            <a href="{{ route('xstinh.tinh', $pro->slug) }}"
-                                title="{{ $pro->name }}">{{ $pro->name }}</a>
-                            <i class="icon icon_live" style="display: none"><i
-                                    class="fas fa-spinner fa-pulse text-danger"></i></i>
-                            <i class="fas fa-check icon icon_done" style="display: none"></i>
-                            <span class="badge icon icon_w" style="display: none">17:05</span>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="{{ route('xstinh.tinh', $pro->slug) }}"
+                                    title="{{ $pro->name }}">{{ $pro->name }}</a>
+                                <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                        class="fas fa-check-circle text-success"></i></span>
+                                <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                                    <div class="live-dot dot-1"></div>
+                                    <div class="live-dot dot-2"></div>
+                                    <div class="live-dot dot-3"></div>
+                                </span>
+                            </div>
                         </li>
                     @else
                         <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif><a
@@ -48,13 +68,17 @@
                 @foreach ($mn_province as $pro)
                     @if (strpos($pro->ngay_quay, $day) !== false)
                         <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif>
-                            <a href="{{ route('xstinh.tinh', $pro->slug) }}"
-                                title="{{ $pro->name }}">{{ $pro->name }}
-                            </a>
-                            <i class="icon icon_live" style="display: none"><i
-                                    class="fas fa-spinner fa-pulse text-danger"></i></i>
-                            <i class="fas fa-check icon icon_done" style="display: none"></i>
-                            <span class="badge icon icon_w" style="display: none">16:05</span>
+                            <div class="d-flex align-items-center justify-content-between">
+                                <a href="{{ route('xstinh.tinh', $pro->slug) }}"
+                                    title="{{ $pro->name }}">{{ $pro->name }}</a>
+                                <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                        class="fas fa-check-circle text-success"></i></span>
+                                <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                                    <div class="live-dot dot-1"></div>
+                                    <div class="live-dot dot-2"></div>
+                                    <div class="live-dot dot-3"></div>
+                                </span>
+                            </div>
                         </li>
                     @else
                         <li @if (url()->full() == route('xstinh.tinh', $pro->slug)) class="active" @endif><a
@@ -66,36 +90,78 @@
             </ul>
         </div>
 
-       
 
-        <div class="content-right bullet tk-block live_mb">
+
+        <div class="content-right bullet tk-block live_vietlott">
             <div class="title-r"><a class="bg-blue" title="Xổ số vietlott" href="{{ route('vietlott') }}">Xổ số
                     vietlott</a></div>
             <ul>
-                <li @if (url()->full() == route('xsthantai')) class="active" @endif><a href="{{ route('xsthantai') }}">Thần
-                        Tài
-                    </a></li>
-                <li @if (url()->full() == route('dientoan123')) class="active" @endif><a href="{{ route('dientoan123') }}">Điện
-                        toán 123
-                    </a></li>
-                <li @if (url()->full() == route('dientoan6x36')) class="active" @endif><a href="{{ route('dientoan6x36') }}">Điện
-                        toán 6x36</a></li>
-                {{-- <li @if (url()->full() == route('max3d')) class="active" @endif><a href="#">Max 3D</a> --}}
-                {{-- </li> --}}
-                {{-- <li @if (url()->full() == route('max3dpro')) class="active" @endif><a href="#">Max 3D --}}
-                {{-- Pro --}}
-                {{-- </a></li> --}}
-                <li @if (url()->full() == route('mega645')) class="active" @endif><a href="{{ route('mega645') }}">Mega
-                        6/45</a></li>
-                <li @if (url()->full() == route('power655')) class="active" @endif><a href="{{ route('power655') }}">Power
-                        6/55
-                    </a></li>
+                <li class="li-thantai {{ url()->full() == route('xsthantai') ? 'active' : '' }}">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="{{ route('xsthantai') }}">Thần Tài</a>
+                        <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                class="fas fa-check-circle text-success"></i></span>
+                        <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                            <div class="live-dot dot-1"></div>
+                            <div class="live-dot dot-2"></div>
+                            <div class="live-dot dot-3"></div>
+                        </span>
+                    </div>
+                </li>
+                <li class="li-dientoan123 {{ url()->full() == route('dientoan123') ? 'active' : '' }}">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="{{ route('dientoan123') }}">Điện toán 123</a>
+                        <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                class="fas fa-check-circle text-success"></i></span>
+                        <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                            <div class="live-dot dot-1"></div>
+                            <div class="live-dot dot-2"></div>
+                            <div class="live-dot dot-3"></div>
+                        </span>
+                    </div>
+                </li>
+                <li class="li-dientoan6x36 {{ url()->full() == route('dientoan6x36') ? 'active' : '' }}">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="{{ route('dientoan6x36') }}">Điện toán 6x36</a>
+                        <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                class="fas fa-check-circle text-success"></i></span>
+                        <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                            <div class="live-dot dot-1"></div>
+                            <div class="live-dot dot-2"></div>
+                            <div class="live-dot dot-3"></div>
+                        </span>
+                    </div>
+                </li>
+                <li class="li-mega645 {{ url()->full() == route('mega645') ? 'active' : '' }}">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="{{ route('mega645') }}">Mega 6/45</a>
+                        <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                class="fas fa-check-circle text-success"></i></span>
+                        <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                            <div class="live-dot dot-1"></div>
+                            <div class="live-dot dot-2"></div>
+                            <div class="live-dot dot-3"></div>
+                        </span>
+                    </div>
+                </li>
+                <li class="li-power655 {{ url()->full() == route('power655') ? 'active' : '' }}">
+                    <div class="d-flex align-items-center justify-content-between">
+                        <a href="{{ route('power655') }}">Power 6/55</a>
+                        <span class="hidden-mobile icon-live-done me-3" style="display: none"><i
+                                class="fas fa-check-circle text-success"></i></span>
+                        <span class="hidden-mobile icon-live-wait me-3" style="display:none">
+                            <div class="live-dot dot-1"></div>
+                            <div class="live-dot dot-2"></div>
+                            <div class="live-dot dot-3"></div>
+                        </span>
+                    </div>
+                </li>
             </ul>
-
         </div>
 
         <div class="content-right bullet tk-cau ">
-            <div class="title-r"><a class="bg-blue" title="Dò vé số online - May mắn mỗi ngày!...">Dò vé số online - May
+            <div class="title-r"><a class="bg-blue" title="Dò vé số online - May mắn mỗi ngày!...">Dò vé số online -
+                    May
                     mắn mỗi ngày!...</a></div>
             <div class="mx-2">
                 <form action="{{ route('do-ve-so') }}" method="get">
@@ -146,7 +212,7 @@
             </ul>
         </div>
 
-        
+
 
     </div>
     <div class="col-right">
@@ -163,16 +229,19 @@
                     <span class="fw-bold ms-2 ">
                         <i class="fa-regular fa-hand-point-right" style="color: #d05f43;"></i>
                         @if ($item->category_id == '1')
-                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmb') }}" title="Dự đoán xổ số miền Bắc">Dự đoán XSMB</a>
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmb') }}"
+                                title="Dự đoán xổ số miền Bắc">Dự đoán XSMB</a>
                         @elseif ($item->category_id == '3')
-                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmn') }}" title="Dự đoán xổ số miền Nam">Dự đoán XSMN</a>
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmn') }}"
+                                title="Dự đoán xổ số miền Nam">Dự đoán XSMN</a>
                         @elseif ($item->category_id == '2')
-                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmt') }}" title="Dự đoán xổ số miền Trung">Dự đoán XSMT</a>
+                            <a class="text-primary fw-bold" href="{{ route('dudoan.xsmt') }}"
+                                title="Dự đoán xổ số miền Trung">Dự đoán XSMT</a>
                         @endif
                     </span>
-                    <li class="clearfix"><a title="{{ $item->title }}" href="{{ $link }}" class="fl"><img
-                                class="mag-r5 fl lazy" width="60" height="33" title="{{ $item->title }}"
-                                alt="{{ $item->title }}" src="{{ $item->img }}"
+                    <li class="clearfix"><a title="{{ $item->title }}" href="{{ $link }}"
+                            class="fl"><img class="mag-r5 fl lazy" width="60" height="33"
+                                title="{{ $item->title }}" alt="{{ $item->title }}" src="{{ $item->img }}"
                                 data-src="{{ $item->img }}"></a><a href="{{ $link }}"
                             title="{{ $item->title }}">{{ $item->title }}</a></li>
                 @endforeach
@@ -180,51 +249,63 @@
         </div>
 
         <div class="content-right bullet live_mb">
-            <div class="title-r"><a class="bg-blue" href="{{ route('soi-cau-vip') }}" title="Soi Cầu VIP" style="background: linear-gradient(to right, #dff045, #9c985a);">Soi Cầu VIP</a></div>
+            <div class="title-r"><a class="bg-blue" href="{{ route('soi-cau-vip') }}" title="Soi Cầu VIP"
+                    style="background: linear-gradient(to right, #dff045, #9c985a);">Soi Cầu VIP</a></div>
             <ul class="list-news">
                 @foreach (App\Models\NewLoKhung::where('type', 'soi-cau-vip')->latest()->take(3)->get() as $item)
                     <li class="clearfix d-flex align-items-center">
-                        <a title="{{ $item->title }}" href="{{ route('soi-cau-vip.detail', $item->slug) }}" class="fl">
-                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33" title="{{ $item->title }}"
-                                alt="{{ $item->title }}" src="{{ $item->img }}" data-src="{{ $item->img }}">
+                        <a title="{{ $item->title }}" href="{{ route('soi-cau-vip.detail', $item->slug) }}"
+                            class="fl">
+                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33"
+                                title="{{ $item->title }}" alt="{{ $item->title }}" src="{{ $item->img }}"
+                                data-src="{{ $item->img }}">
                         </a>
-                        <a href="{{ route('soi-cau-vip.detail', $item->slug) }}" title="{{ $item->title }}">{{ $item->title }}</a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-        
-        <div class="content-right bullet live_mb">
-            <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-lo-khung') }}" title="Nuôi lô khung" style="background: linear-gradient(to right, #aaeeff, #14dbe9);">Nuôi lô khung</a></div>
-            <ul class="list-news">
-                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-lo-khung')->latest()->take(3)->get() as $item)
-                    <li class="clearfix d-flex align-items-center">
-                        <a title="{{ $item->title }}" href="{{ route('nuoi-lo-khung.detail', $item->slug) }}" class="fl">
-                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33" title="{{ $item->title }}"
-                                alt="{{ $item->title }}" src="{{ $item->img }}" data-src="{{ $item->img }}">
-                        </a>
-                        <a href="{{ route('nuoi-lo-khung.detail', $item->slug) }}" title="{{ $item->title }}">{{ $item->title }}</a>
-                    </li>
-                @endforeach
-            </ul>
-        </div>
-        
-        <div class="content-right bullet live_mb">
-            <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-de-khung') }}" title="Nuôi đề khung" style="background: linear-gradient(to right, #38ef7d, #04990c);">Nuôi đề khung</a></div>
-            <ul class="list-news">
-                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-de-khung')->latest()->take(3)->get() as $item)
-                    <li class="clearfix d-flex align-items-center">
-                        <a title="{{ $item->title }}" href="{{ route('nuoi-de-khung.detail', $item->slug) }}" class="fl">
-                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33" title="{{ $item->title }}"
-                                alt="{{ $item->title }}" src="{{ $item->img }}" data-src="{{ $item->img }}">
-                        </a>
-                        <a href="{{ route('nuoi-de-khung.detail', $item->slug) }}" title="{{ $item->title }}">{{ $item->title }}</a>
+                        <a href="{{ route('soi-cau-vip.detail', $item->slug) }}"
+                            title="{{ $item->title }}">{{ $item->title }}</a>
                     </li>
                 @endforeach
             </ul>
         </div>
 
-        
+        <div class="content-right bullet live_mb">
+            <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-lo-khung') }}" title="Nuôi lô khung"
+                    style="background: linear-gradient(to right, #aaeeff, #14dbe9);">Nuôi lô khung</a></div>
+            <ul class="list-news">
+                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-lo-khung')->latest()->take(3)->get() as $item)
+                    <li class="clearfix d-flex align-items-center">
+                        <a title="{{ $item->title }}" href="{{ route('nuoi-lo-khung.detail', $item->slug) }}"
+                            class="fl">
+                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33"
+                                title="{{ $item->title }}" alt="{{ $item->title }}" src="{{ $item->img }}"
+                                data-src="{{ $item->img }}">
+                        </a>
+                        <a href="{{ route('nuoi-lo-khung.detail', $item->slug) }}"
+                            title="{{ $item->title }}">{{ $item->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+
+        <div class="content-right bullet live_mb">
+            <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-de-khung') }}" title="Nuôi đề khung"
+                    style="background: linear-gradient(to right, #38ef7d, #04990c);">Nuôi đề khung</a></div>
+            <ul class="list-news">
+                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-de-khung')->latest()->take(3)->get() as $item)
+                    <li class="clearfix d-flex align-items-center">
+                        <a title="{{ $item->title }}" href="{{ route('nuoi-de-khung.detail', $item->slug) }}"
+                            class="fl">
+                            <img class="mag-r5 fl lazy img-fluid" width="60" height="33"
+                                title="{{ $item->title }}" alt="{{ $item->title }}" src="{{ $item->img }}"
+                                data-src="{{ $item->img }}">
+                        </a>
+                        <a href="{{ route('nuoi-de-khung.detail', $item->slug) }}"
+                            title="{{ $item->title }}">{{ $item->title }}</a>
+                    </li>
+                @endforeach
+            </ul>
+        </div>
+
+
 
 
         {{-- <div class="content-right bullet"> --}}

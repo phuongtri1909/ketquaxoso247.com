@@ -28,6 +28,7 @@ class FrontendMenuRight extends AbstractWidget
 //        $xs_today_mb = Province::where('mien', 1)->where('ngay_quay', 'like', '%' . $day . '%')->get();
         $xs_today_mt = Province::where('mien', 2)->where('ngay_quay', 'like', '%' . $day . '%')->get();
         $xs_today_mn = Province::where('mien', 3)->where('ngay_quay', 'like', '%' . $day . '%')->get();
+        $xs_today_mb = Province::where('mien', 1)->where('ngay_quay', 'like', '%' . $day . '%')->get();
 
 //        $yesterday = getThuNumber(date('Y-m-d', strtotime("-1 days")));
 //        $xs_yesterday_tn = Province::where('ngay_quay', 'like', '%' . $yesterday . '%')
@@ -83,6 +84,7 @@ class FrontendMenuRight extends AbstractWidget
 //            'xs_today_mb' => $xs_today_mb,
             'xs_today_mt' => $xs_today_mt,
             'xs_today_mn' => $xs_today_mn,
+            'xs_today_mb' => $xs_today_mb,
 //            'xs_yesterday_tn' => $xs_yesterday_tn,
             'day' => $day,
             'mb_province' => $mb_province,

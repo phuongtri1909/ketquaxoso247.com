@@ -178,7 +178,7 @@
                         {{-- </div> --}}
                     </li>
                     <li class="fl clearfix @if (request()->routeIs('home.thu*') || request()->routeIs('home.cn') || request()->routeIs('home')) active @endif"><a
-                            href="{{ route('home') }}" class="fl" title="XSMB">KQXS</a>
+                            href="{{ route('home') }}" class="fl" title="XSMB"><i class="fa-solid fa-house"></i></a>
                     </li>
                     <li class="fl clearfix @if (request()->routeIs('xsmb.thu*') || request()->routeIs('xsmb.cn') || request()->routeIs('xsmb')) active @endif"><a
                             href="{{ route('xsmb') }}" class="fl" title="XSMB">XSMB</a><span
