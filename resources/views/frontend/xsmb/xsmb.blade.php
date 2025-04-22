@@ -1,13 +1,14 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
+$titleSeo = \App\Models\TitleSeo::where('page', 'xsmb')->first();
 ?>
 @extends('frontend.layouts.app')
-@section('title', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
-@section('decription', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
-@section('keyword', 'xsmb, sxmb, kqxsmb, xstd, xsmb hom nay, sxmb hom nay, xs mien bac, kqxs mien bac, xsmb 30 ngay, xổ
+@section('title', $titleSeo->title ?? 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('decription', $titleSeo->description ?? 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('keyword', $titleSeo->keywords ?? 'xsmb, sxmb, kqxsmb, xstd, xsmb hom nay, sxmb hom nay, xs mien bac, kqxs mien bac, xsmb 30 ngay, xổ
     số miền bắc,kq mb, kq xsmb, ket qua xsmb, xo so mien bac, sxmb hom nay, ket qua mien bac, kết quả xổ số miền bắc,xo so
     thu do,xo so mien bac hom nay')
-@section('h1', 'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('h1', $titleSeo->h1 ??  'KQXSMB - SXMB - Trực tiếp kết quả xổ số miền Bắc - XSTD hôm nay nhanh nhất, chính xác nhất')
 @section('content')
     <div class="col-l">
         {{-- <div class="box"> --}}

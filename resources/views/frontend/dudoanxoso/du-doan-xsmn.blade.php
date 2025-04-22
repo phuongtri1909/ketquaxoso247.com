@@ -1,14 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
+$titleSeo = \App\Models\TitleSeo::where('page', 'dudoanxsmn')->first();
 ?>
 @extends('frontend.layouts.app')
 
-@section('title', 'Dự đoán XSMN - DD XSMN - Dự đoán xổ số Miền Nam')
-@section('decription',
-    'Dự đoán XSMN - DD XSMN - Dự đoán xổ số Miền Nam chính xác nhất hôm nay - Tham khảo dự đoán MN
-    miễn phí, xác suất về cực cao trong ngày')
-@section('h1', 'Dự đoán XSMN - DD XSMN - Dự đoán xổ số Miền Nam')
-
+@section('title',$titleSeo->title ??  'Dự đoán XSMN - DD XSMN - Dự đoán xổ số Miền Nam')
+@section('description',$titleSeo->description ?? 'Dự đoán xổ số miền Nam hôm nay, dự đoán kết quả xổ số miền Nam, dự đoán XSMN, dự đoán XSMN hôm nay, dự đoán XSMN thứ 2, thứ 3, thứ 4, thứ 5, thứ 6, thứ 7')
+@section('keywords',$titleSeo->keyword ?? 'Dự đoán xổ số miền Nam, dự đoán XSMN, dự đoán XSMN hôm nay, dự đoán XSMN thứ 2, thứ 3, thứ 4, thứ 5, thứ 6, thứ 7')
+@section('h1',$titleSeo->h1 ?? 'Dự đoán xổ số miền Nam hôm nay')
 @section('breadcrumb')
     <div class="linkway">
         <div class="main">

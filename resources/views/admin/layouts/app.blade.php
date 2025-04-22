@@ -166,6 +166,14 @@
                         </a>
                     </li>
                     <li class="nav-item dropdown">
+                        <a class="dropdown-toggle" href="{{route('title-seo.index')}}">
+                                <span class="icon-holder">
+                                    <i class="fas fa-heading"></i>
+                                </span>
+                            <span class="title">Nội dung SEO</span>
+                        </a>
+                    </li>
+                    <li class="nav-item dropdown">
                         <a class="dropdown-toggle" href="javascript:void(0);">
                                 <span class="icon-holder">
                                     <i class="anticon anticon-team"></i>

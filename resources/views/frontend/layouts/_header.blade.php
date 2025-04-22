@@ -14,7 +14,7 @@
     <meta name="geo.placename" content="Hồ Chí Minh">
     <meta name="geo.position" content="">
     <meta name="ICBM" content="">
-    <meta name="DC.title" content="KQXS - Xổ Số Hôm Nay - Trực Tiếp Xổ Số - Kết Quả Xổ Số 3 Miền Chính Xác Nhất" />
+    <meta name="DC.title" content="@yield('decription')" />
     <meta name="DC.Source" content="/">
     <meta name="DC.Coverage" content="Vietnam">
     <meta name="RATING" content="GENERAL">
@@ -40,9 +40,9 @@
     <meta property="article:publisher" content="">
     <meta property="article:author" content="{{ $_SERVER['HTTP_HOST'] }}" />
     <meta property="article:section" content="Lottery" />
-    <meta property="article:tag" content="Xổ sổ hôm nay, kết quả xổ số , trực tiếp xổ số" />
+    <meta property="article:tag" content="@yield('decription')" />
     <meta name="AUTHOR" content="{{ $_SERVER['HTTP_HOST'] }}" />
-    <meta name="COPYRIGHT" content="Copyright (C) 2023 {{ $_SERVER['HTTP_HOST'] }}" />
+    <meta name="COPYRIGHT" content="Copyright (C) {{ date('Y') }} {{ $_SERVER['HTTP_HOST'] }}" />
     <link rel='index' title='Kết quả xổ số' href='{{ route('home') }}' />
     <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/logosite.png') }}">
     <link rel="shortcut icon" size="48x48" href="{{ url('frontend/images/favicon.ico') }}">

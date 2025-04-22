@@ -1,16 +1,16 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
+$titleSeo = \App\Models\TitleSeo::where('page', 'xsmt')->first();
 ?>
 
 @extends('frontend.layouts.app')
 
-@section('title', 'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSMT hôm nay nhanh nhất, chính xác nhất')
-@section('decription',
-    'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSMT hôm nay nhanh nhất, chính xác nhất')
-@section('keyword',
-    'xsmt, SXMT, kqxsmt, xổ số miền Trung, xs mien Trung, kq mien Trung, kqxs mien Trung, ket qua xsmt,
-    xo so mien Trung, xsmt hom nay, ket qua mien Trung, kết quả xổ số miền Trung, xo so mien Trung hom nay')
-@section('h1', 'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSMT hôm nay nhanh nhất, chính xác nhất')
+@section('title', $titleSeo->title ?? 'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('decription', $titleSeo->description ?? 'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSTD hôm nay nhanh nhất, chính xác nhất')
+@section('keyword', $titleSeo->keywords ?? 'xsmt, sxmt, kqxsmtr, xstd, xsmt hom nay, sxmt hom nay, xs mien trung, kqxs mien trung, xsmt 30 ngay, xổ
+    số miền trung,kq mt, kq xsmt, ket qua xsmt, xo so mien trung, sxmt hom nay, ket qua mien trung, kết quả xổ số miền trung,xo so
+    mien trung,xo so mien trung hom nay')
+@section('h1', $titleSeo->h1 ??  'KQXSMT - SXMT - Trực tiếp kết quả xổ số miền Trung - XSTD hôm nay nhanh nhất, chính xác nhất')
 @section('content')
     <div class="col-l" style="height: auto !important;">
         {{-- <div class="box"> --}}

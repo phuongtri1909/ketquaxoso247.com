@@ -1,12 +1,12 @@
 @extends('frontend.layouts.app')
-@section('title', 'KQXS - xổ sổ trực tiếp - Trực tiếp kết quả xổ số hôm nay')
-@section('decription',
-    'KQXS - Trực tiếp xổ số hôm nay nhanh và chính xác nhất từ trường quay xổ số hàng ngày. Xem kết
-    quả Xổ số 3 miền siêu chuẩn miễn phí.')
-@section('keyword',
-    'Xổ số, XS, Trực tiếp kết quả, trực tiếp xổ số, kết quả xổ số, KQXS, xổ số hôm nay, xshn, kết quả xổ
-    số, kqxs, xổ số 3 miền, xs3m, xổ số kiến thiết, xskt')
-@section('h1', 'KQXS - xổ sổ trực tiếp - Trực tiếp kết quả xổ số hôm nay')
+
+@php
+    $titleSeo = \App\Models\TitleSeo::where('page', 'home')->first();
+@endphp
+@section('title', $titleSeo->title ?? 'KQXS - xổ sổ trực tiếp - Trực tiếp kết quả xổ số hôm nay')
+@section('decription', $titleSeo->description ?? 'KQXS - Trực tiếp xổ số hôm nay nhanh và chính xác nhất từ trường quay xổ số hàng ngày. Xem kết quả Xổ số 3 miền siêu chuẩn miễn phí.')
+@section('keyword', $titleSeo->keywords ?? 'Xổ số, XS, Trực tiếp kết quả, trực tiếp xổ số, kết quả xổ số, KQXS, xổ số hôm nay, xshn, kết quả xổ số, kqxs, xổ số 3 miền, xs3m, xổ số kiến thiết, xskt')
+@section('h1', $titleSeo->h1 ?? 'KQXS - xổ sổ trực tiếp - Trực tiếp kết quả xổ số hôm nay')
 @section('content')
     <div class="col-l">
         {{-- <div class="box"> --}}

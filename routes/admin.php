@@ -8,12 +8,13 @@ use App\Http\Controllers\Admin\UserController;
 use App\Http\Controllers\Admin\LoginController;
 use App\Http\Controllers\Admin\XSLiveController;
 use App\Http\Controllers\Admin\SoMoNewController;
+use App\Http\Controllers\Admin\TitleSeoController;
+use App\Http\Controllers\Admin\DuDoanXoSoController;
 use App\Http\Controllers\Admin\LinkFooterController;
 use App\Http\Controllers\Admin\LinkHeaderController;
+use App\Http\Controllers\Admin\NewLoKhungController;
 use App\Http\Controllers\Admin\HtmlContentController;
 use App\Http\Controllers\Admin\CustomUploadController;
-use App\Http\Controllers\Admin\DuDoanXoSoController;
-use App\Http\Controllers\Admin\NewLoKhungController;
 
 Route::get('login', [LoginController::class, 'login'])->name('login');
 Route::post('login', [LoginController::class, 'store'])->name('login.post');
@@ -36,6 +37,8 @@ Route::middleware(['auth'])->group(function () {
     Route::resource('news', NewsController::class);
     Route::resource('cau-lo-de', NewLoKhungController::class);
     Route::resource('user', UserController::class);
+
+    Route::resource('title-seo', TitleSeoController::class)->except(['show','create'.'destroy']);
 
     Route::resource('posts', DuDoanXoSoController::class)->except(['show','create','store','destroy']);
 

@@ -1,11 +1,13 @@
 <?php
 date_default_timezone_set('Asia/Ho_Chi_Minh');
+$titleSeo = \App\Models\TitleSeo::where('page', 'dudoanxsmt')->first();
 ?>
 @extends('frontend.layouts.app')
 
-@section('title','Dự đoán XSMT - DD XSMT - Dự đoán xổ số Miền Trung')
-@section('decription','Dự đoán XSMT - DD XSMT - Dự đoán xổ số Miền Trung chính xác nhất hôm nay - Tham khảo dự đoán MT miễn phí, xác suất về cực cao trong ngày')
-@section('h1','Dự đoán XSMT - DD XSMT - Dự đoán xổ số Miền Trung')
+@section('title',$titleSeo->title ??  'Dự đoán XSMT - DD XSMT - Dự đoán xổ số Miền Trung')
+@section('description',$titleSeo->description ?? 'Dự đoán xổ số miền Trung hôm nay, dự đoán kết quả xổ số miền Trung, dự đoán XSMT, dự đoán XSMT hôm nay, dự đoán XSMT thứ 2, thứ 3, thứ 4, thứ 5, thứ 6, thứ 7')
+@section('keywords',$titleSeo->keyword ?? 'Dự đoán xổ số miền Trung, dự đoán XSMT, dự đoán XSMT hôm nay, dự đoán XSMT thứ 2, thứ 3, thứ 4, thứ 5, thứ 6, thứ 7')
+@section('h1',$titleSeo->h1 ?? 'Dự đoán xổ số miền Trung hôm nay')
 
 @section('breadcrumb')
     <div class="linkway">

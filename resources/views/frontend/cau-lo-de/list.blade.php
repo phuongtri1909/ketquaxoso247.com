@@ -9,23 +9,26 @@ date_default_timezone_set('Asia/Ho_Chi_Minh');
         'nuoi-lo-khung' => 'Nuôi lô khung',
         'nuoi-de-khung' => 'Nuôi đề khung',
     ];
+   
+    $titleSeo = \App\Models\TitleSeo::where('page', $type)->first();
 
     $pageTitle =
         isset($type) && isset($typeLabels[$type])
-            ? $typeLabels[$type] . ' - Dự đoán xổ số chính xác nhất'
-            : 'Dự đoán xổ số - Soi cầu VIP, Nuôi lô khung hiệu quả';
+            ? $typeLabels[$type] . ' - Soi cầu VIP, Nuôi lô khung hiệu quả'
+            : 'Soi cầu VIP, Nuôi lô khung, Nuôi đề khung - Dự đoán xổ số chuẩn xác';
 
     $pageDescription =
         isset($type) && isset($typeLabels[$type])
-            ? $typeLabels[$type] . ' - Các cặp số đẹp, dự đoán chính xác kết quả xổ số hôm nay'
-            : 'Dự đoán xổ số chuẩn xác từ các chuyên gia, soi cầu VIP, nuôi lô khung, nuôi đề khung hiệu quả';
+            ? $typeLabels[$type] . ' - Soi cầu VIP, Nuôi lô khung hiệu quả'
+            : 'Soi cầu VIP, Nuôi lô khung, Nuôi đề khung - Dự đoán xổ số chuẩn xác';
 
-    $pageH1 = isset($type) && isset($typeLabels[$type]) ? $typeLabels[$type] : 'Dự đoán xổ số';
+    $pageH1 = isset($type) && isset($typeLabels[$type]) ? $typeLabels[$type] : 'Soi cầu VIP, Nuôi lô khung, Nuôi đề khung';
 @endphp
 
-@section('title', $pageTitle)
-@section('decription', $pageDescription)
-@section('h1', $pageH1)
+@section('title', $titleSeo->title ?? $pageTitle)
+@section('description', $titleSeo->description ?? $pageDescription)
+@section('keywords', $titleSeo->keyword ?? 'soi cầu, nuôi lô khung, nuôi đề khung, dự đoán xổ số')
+@section('h1', $titleSeo->h1 ?? $pageH1)
 
 @section('breadcrumb')
     <div class="linkway">
