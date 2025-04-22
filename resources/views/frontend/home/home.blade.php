@@ -24,123 +24,67 @@
                 <table class="table-fixed">
                     <tbody>
                         <tr style="background-color: #ffeeba">
-                            <td class="text-center">KQXSMB</td>
-                            <td class="text-center">KQXSMT</td>
+                            <td class="text-center">XSMB</td>
+                            <td class="text-center">XSMT</td>
                             <td class="text-center">
-                                KQXSMN
+                                XSMN
                             </td>
                         </tr>
                         @for ($i = 0; $i < $maxRows; $i++)
                             <tr>
-                                <td class="live_mb">
+                                <td class="live_mb text-center">
                                     @if ($i < count($xs_today_mb))
                                         <!-- Hiển thị xổ số tỉnh miền Bắc -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('xstinh.tinh', $xs_today_mb[$i]->slug) }}"
                                                 title="Xổ số {{ $xs_today_mb[$i]->name }}">{{ $xs_today_mb[$i]->name }}</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @elseif ($i == count($xs_today_mb))
                                         <!-- Hiển thị Thần Tài khi đã hết các tỉnh miền Bắc -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('xsthantai') }}" title="Thần Tài">Thần Tài</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @elseif ($i == count($xs_today_mb) + 1)
                                         <!-- Hiển thị Điện toán 123 -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('dientoan123') }}" title="Điện toán 123">Điện toán 123</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @elseif ($i == count($xs_today_mb) + 2 && in_array(date('w'), [3, 6]))
                                         <!-- Hiển thị Điện toán 6x36 nếu là thứ 4 hoặc thứ 7 -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('dientoan6x36') }}" title="Điện toán 6x36">Điện toán 6x36</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @elseif (
                                         ($i == count($xs_today_mb) + 3 || ($i == count($xs_today_mb) + 2 && !in_array(date('w'), [3, 6]))) &&
                                             in_array(date('w'), [0, 3, 5]))
                                         <!-- Hiển thị Mega 6/45 nếu là chủ nhật, thứ 4 hoặc thứ 6 -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('mega645') }}" title="Mega 6/45">Mega 6/45</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @elseif ($i >= count($xs_today_mb) + 2 && in_array(date('w'), [2, 4, 6]))
                                         <!-- Hiển thị Power 6/55 nếu là thứ 3, thứ 5 hoặc thứ 7 -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('power655') }}" title="Power 6/55">Power 6/55</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @endif
                                 </td>
 
-                                <td class="live_mt">
+                                <td class="live_mt text-center">
                                     @if (!empty($xs_today_mt[$i]))
                                         <!-- Hiển thị xổ số tỉnh miền Trung -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('xstinh.tinh', $xs_today_mt[$i]->slug) }}"
                                                 title="Xổ số {{ $xs_today_mt[$i]->name }}">{{ $xs_today_mt[$i]->name }}</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @endif
                                 </td>
 
-                                <td class="live_mn">
+                                <td class="live_mn text-center">
                                     @if (!empty($xs_today_mn[$i]))
                                         <!-- Hiển thị xổ số tỉnh miền Nam -->
-                                        <div class="d-flex align-items-center justify-content-between">
+                                        <div class="">
                                             <a href="{{ route('xstinh.tinh', $xs_today_mn[$i]->slug) }}"
                                                 title="Xổ số {{ $xs_today_mn[$i]->name }}">{{ $xs_today_mn[$i]->name }}</a>
-                                            <span class="hidden-mobile icon-live-done" style="display: none"><i
-                                                    class="fas fa-check-circle text-success"></i></span>
-                                            <span class="hidden-mobile icon-live-wait" style="display:none">
-                                                <div class="live-dot dot-1"></div>
-                                                <div class="live-dot dot-2"></div>
-                                                <div class="live-dot dot-3"></div>
-                                            </span>
                                         </div>
                                     @endif
                                 </td>
