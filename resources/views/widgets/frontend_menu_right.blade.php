@@ -252,7 +252,7 @@
             <div class="title-r"><a class="bg-blue" href="{{ route('soi-cau-vip') }}" title="Soi Cầu VIP"
                     style="background: linear-gradient(to right, #dff045, #9c985a);">Soi Cầu VIP</a></div>
             <ul class="list-news">
-                @foreach (App\Models\NewLoKhung::where('type', 'soi-cau-vip')->latest()->take(3)->get() as $item)
+                @foreach (App\Models\NewLoKhung::where('type', 'soi-cau-vip')->latest()->take(10)->get() as $item)
                     <li class="clearfix d-flex align-items-center">
                         <a title="{{ $item->title }}" href="{{ route('soi-cau-vip.detail', $item->slug) }}"
                             class="fl">
@@ -271,7 +271,7 @@
             <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-lo-khung') }}" title="Nuôi lô khung"
                     style="background: linear-gradient(to right, #aaeeff, #14dbe9);">Nuôi lô khung</a></div>
             <ul class="list-news">
-                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-lo-khung')->latest()->take(3)->get() as $item)
+                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-lo-khung')->latest()->take(10)->get() as $item)
                     <li class="clearfix d-flex align-items-center">
                         <a title="{{ $item->title }}" href="{{ route('nuoi-lo-khung.detail', $item->slug) }}"
                             class="fl">
@@ -290,7 +290,7 @@
             <div class="title-r"><a class="bg-blue" href="{{ route('nuoi-de-khung') }}" title="Nuôi đề khung"
                     style="background: linear-gradient(to right, #38ef7d, #04990c);">Nuôi đề khung</a></div>
             <ul class="list-news">
-                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-de-khung')->latest()->take(3)->get() as $item)
+                @foreach (App\Models\NewLoKhung::where('type', 'nuoi-de-khung')->latest()->take(10)->get() as $item)
                     <li class="clearfix d-flex align-items-center">
                         <a title="{{ $item->title }}" href="{{ route('nuoi-de-khung.detail', $item->slug) }}"
                             class="fl">
