@@ -54,7 +54,7 @@ return [
     |
     */
 
-    'url' => 'https://ketquaxoso247.com',
+    'url' => 'https://xosotructiep.online',
 
     'asset_url' => env('ASSET_URL'),
 

@@ -6,7 +6,7 @@
 
         <description>Dự đoán XSMT</description>
         <!-- <language>en-gb</language> -->
-        <copyright>ketquaxoso247.com</copyright>
+        <copyright>xosotructiep.online</copyright>
         <lastBuildDate>{{ now()->format('d-m-Y H:i:s') }}</lastBuildDate>
         <ttl>20</ttl>
             @foreach($items as $item)

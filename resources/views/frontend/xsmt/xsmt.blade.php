@@ -65,7 +65,7 @@ $titleSeo = \App\Models\TitleSeo::where('page', 'xsmt')->first();
 
 
         <div class="box-content">
-            <p>XSMT hôm nay - SXMT - XSMTR - <a style="text-decoration: underline" href="{{ route('xsmt') }}">xổ số miền Trung</a> hôm nay cập nhật mới nhất. ketquaxoso247.com trực tiếp kết quả xổ
+            <p>XSMT hôm nay - SXMT - XSMTR - <a style="text-decoration: underline" href="{{ route('xsmt') }}">xổ số miền Trung</a> hôm nay cập nhật mới nhất. xosotructiep.online trực tiếp kết quả xổ
                 số miền Trung nhanh nhất và chính xác nhất hàng ngày, KQXSMT được quay số vào lúc 17:15 tất cả các ngày
                 trong tuần.</p>
 

@@ -24,22 +24,22 @@ $count = count($xsmts);
     <meta property="og:type" content="website">
     <meta property="og:title" content="Mã nhúng">
     <meta property="og:description" content="">
-    <meta property="og:url" content="https://ketquaxoso247.com">
+    <meta property="og:url" content="https://xosotructiep.online">
     <meta property="og:image" content="">
-    <meta property="og:site_name" content="ketquaxoso247.com">
+    <meta property="og:site_name" content="xosotructiep.online">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="ketquaxoso247.com">
-    <meta name="twitter:creator" content="ketquaxoso247.com">
+    <meta name="twitter:site" content="xosotructiep.online">
+    <meta name="twitter:creator" content="xosotructiep.online">
     <meta name="twitter:title" content="Mã nhúng">
     <meta name="twitter:description" content="">
     <meta name="twitter:image" content="">
     <meta property="article:publisher" content="">
-    <meta property="article:author" content="ketquaxoso247.com">
+    <meta property="article:author" content="xosotructiep.online">
     <meta property="article:section" content="Lottery">
     <meta property="article:tag" content="kết quả xổ số, kết quả vn">
-    <meta name="AUTHOR" content="ketquaxoso247.com">
-    <meta name="COPYRIGHT" content="Copyright (C) 2023 ketquaxoso247.com">
-    <link rel="index" title="Kết quả xổ số" href="https://ketquaxoso247.com">
+    <meta name="AUTHOR" content="xosotructiep.online">
+    <meta name="COPYRIGHT" content="Copyright (C) 2023 xosotructiep.online">
+    <link rel="index" title="Kết quả xổ số" href="https://xosotructiep.online">
     <link rel="image_src" type="image/jpeg" href="">
     <link rel="shortcut icon" href="{{url('frontend/images/favicon.ico')}}">
 

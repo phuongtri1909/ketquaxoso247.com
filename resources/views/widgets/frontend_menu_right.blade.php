@@ -223,7 +223,7 @@
             <ul class="list-news">
                 @foreach ($postTK as $item)
                     <?php
-                    $link = str_replace('xoso.site', 'ketquaxoso247.com', $item->link);
+                    $link = str_replace('xoso.site', 'xosotructiep.online', $item->link);
                     
                     ?>
                     <span class="fw-bold ms-2 ">

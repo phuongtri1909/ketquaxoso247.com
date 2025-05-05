@@ -71,7 +71,7 @@ class DuDoanXoSoController extends Controller
 //        $tkLoto = $tk_arr['tan_suat'];
 
         $content =  view('frontend.dudoanxoso.du-doan-xsmb-theo-ngay-content', compact('date', 'dateYmd', 'xsmb','pascal','kqs'));
-        $content = str_replace('xosodaiphat.top','ketquaxoso247.com',$content);
+        $content = str_replace('xosodaiphat.top','xosotructiep.online',$content);
         $des = "Dự đoán XSMB $date - Soi cầu dự đoán xổ số miền Bắc ngày $dateDMY do cao thủ chốt số đưa ra siêu chuẩn, miễn phí. Dự đoán lô tô, giải đặc biệt MB ngày $date";
         $title = "Dự đoán Xổ Số Miền Bắc ngày $date - Dự đoán XSMB $dateDMY";
         Post::firstOrCreate([
@@ -151,7 +151,7 @@ class DuDoanXoSoController extends Controller
 
             $pro_custom = $pro;
             $content = view('frontend.dudoanxoso.du-doan-xsmn-theo-ngay-content',compact('date', 'dateYmd', 'xsmns','pascal','kqs','pro_custom'))->render();
-            $content = str_replace('xosodaiphat.top','ketquaxoso247.com',$content);
+            $content = str_replace('xosodaiphat.top','xosotructiep.online',$content);
             $des = "Dự đoán XSMN $date - Soi cầu dự đoán xổ số $pro_custom->name miền Nam ngày $dateDMY do cao thủ chốt số đưa ra siêu chuẩn, miễn phí. Dự đoán lô tô, giải đặc biệt MN ngày $date";
             $title = "Dự đoán Xổ Số $pro_custom->name Miền Nam ngày $date - Dự đoán XSMN $dateDMY";
 
@@ -168,7 +168,7 @@ class DuDoanXoSoController extends Controller
         }
         
         $content = view('frontend.dudoanxoso.du-doan-xsmn-theo-ngay-content',compact('date', 'dateYmd', 'xsmns','pascal','kqs','province_mn'))->render();
-        $content = str_replace('xosodaiphat.top','ketquaxoso247.com',$content);
+        $content = str_replace('xosodaiphat.top','xosotructiep.online',$content);
         $des = "Dự đoán XSMN $date - Soi cầu dự đoán xổ số miền Nam ngày $dateDMY do cao thủ chốt số đưa ra siêu chuẩn, miễn phí. Dự đoán lô tô, giải đặc biệt MN ngày $date";
         $title = "Dự đoán Xổ Số Miền Nam ngày $date - Dự đoán XSMN $dateDMY";
 
@@ -254,7 +254,7 @@ class DuDoanXoSoController extends Controller
             
             $pro_custom = $pro;
             $content = view('frontend.dudoanxoso.du-doan-xsmt-theo-ngay-content',compact('date', 'dateYmd', 'xsmts','pascal','kqs','pro_custom'))->render();
-            $content = str_replace('xosodaiphat.top','ketquaxoso247.com',$content);
+            $content = str_replace('xosodaiphat.top','xosotructiep.online',$content);
             $des = "Dự đoán XSMT $date - Soi cầu dự đoán xổ số $pro_custom->name miền Trung ngày $dateDMY do cao thủ chốt số đưa ra siêu chuẩn, miễn phí. Dự đoán lô tô, giải đặc biệt MT ngày $date";
             $title = "Dự đoán Xổ Số $pro_custom->name Miền Trung ngày $date - Dự đoán XSMT $dateDMY";
             Post::firstOrCreate([
@@ -270,7 +270,7 @@ class DuDoanXoSoController extends Controller
         }
 
         $content = view('frontend.dudoanxoso.du-doan-xsmt-theo-ngay-content',compact('date', 'dateYmd', 'xsmts','pascal','kqs','province_mt'))->render();
-        $content = str_replace('xosodaiphat.top','ketquaxoso247.com',$content);
+        $content = str_replace('xosodaiphat.top','xosotructiep.online',$content);
         $des = "Dự đoán XSMT $date - Soi cầu dự đoán xổ số miền Trung ngày $dateDMY do cao thủ chốt số đưa ra siêu chuẩn, miễn phí. Dự đoán lô tô, giải đặc biệt MT ngày $date";
         $title = "Dự đoán Xổ Số Miền Trung ngày $date - Dự đoán XSMT $dateDMY";
         Post::firstOrCreate([

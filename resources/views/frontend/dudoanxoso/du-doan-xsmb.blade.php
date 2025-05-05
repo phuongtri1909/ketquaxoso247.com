@@ -64,7 +64,7 @@ $titleSeo = \App\Models\TitleSeo::where('page', 'dudoanxsmb')->first();
                 @foreach ($ddXsmb as $item)
                     <?php
                     $link = $item->link;
-                    $link = str_replace('xoso.site', 'ketquaxoso247.com', $link);
+                    $link = str_replace('xoso.site', 'xosotructiep.online', $link);
                     ?>
                     <li class="clearfix">
                         <h3><a href="{{ route('dudoan.xsmb.date', ['date' => getNgayLink($item->date)]) }}"
