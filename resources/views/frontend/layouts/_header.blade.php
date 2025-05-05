@@ -44,7 +44,7 @@
     <meta name="AUTHOR" content="{{ $_SERVER['HTTP_HOST'] }}" />
     <meta name="COPYRIGHT" content="Copyright (C) {{ date('Y') }} {{ $_SERVER['HTTP_HOST'] }}" />
     <link rel='index' title='Kết quả xổ số' href='{{ route('home') }}' />
-    <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/logosite.png') }}">
+    <link rel="image_src" type="image/jpeg" href="{{ url('frontend/images/logosite.png')}}">
     <link rel="shortcut icon" size="48x48" href="{{ url('frontend/images/favicon.ico') }}">
     <link rel="icon" href="{{ asset('frontend/images/favicon.ico') }}" type="image/png/x-icon">
     <meta name="theme-color" content="#ED1C25">
@@ -83,7 +83,7 @@
                     <div class="logo">
                         <a class="txtlogo w-auto" href="{{ route('home') }}"
                             title="KQXS - XS - Xổ Số Kiến Thiết 3 miền hôm nay - XS3M">
-                            <img src="/frontend/images/logosite.png" alt="" style="width: 350px; height: 70px;">
+                            <img src="/frontend/images/logosite.png?v=2" alt="" style="width: 350px; height: 70px;">
                         </a>
                     </div>
                 </div>
